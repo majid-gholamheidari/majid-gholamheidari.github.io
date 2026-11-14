@@ -1,4 +1,4 @@
-/* Majid Heidari — portfolio interactions (vanilla JS, no dependencies) */
+/* Majid Gholamheidari — portfolio interactions (vanilla JS, no dependencies) */
 (() => {
   'use strict';
 
