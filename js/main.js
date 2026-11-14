@@ -320,4 +320,20 @@
 
   // placeholder social links: don't jump to top
   $$('.socials a[href="#"]').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); toast(T.soon); }));
+
+  /* ---------- hero name: shrink until the longest line fits the screen ---------- */
+  const heroTitle = $('.hero-title');
+  if (heroTitle) {
+    const fitTitle = () => {
+      heroTitle.style.fontSize = '';
+      const base = parseFloat(getComputedStyle(heroTitle).fontSize);
+      const room = heroTitle.clientWidth;
+      const widest = Math.max(...$$('.line > span', heroTitle).map((el) => el.offsetWidth));
+      if (widest > room && room > 0) heroTitle.style.fontSize = Math.floor(base * (room / widest) * 0.98 * 100) / 100 + 'px';
+    };
+    fitTitle();
+    window.addEventListener('resize', fitTitle);
+    window.addEventListener('load', fitTitle);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitle);
+  }
 })();
