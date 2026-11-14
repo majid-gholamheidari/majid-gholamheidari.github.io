@@ -1,0 +1,10 @@
+# local tooling
+.claude/
+
+# private working material (ad drafts), not part of the site
+ad/
+
+# kept locally only, not published
+pdf/
+ar.html
+css/rtl.css
