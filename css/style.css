@@ -521,6 +521,7 @@ h2 em { font-size: 1.06em; }
 .xp b { display: block; margin-top: 6px; font-weight: 500; font-size: 15px; color: var(--muted); }
 .xp p { color: var(--muted); font-size: 15.5px; }
 .xp-edu { margin-top: 26px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+.xp-lang { margin-top: 8px; }
 .loc { margin-top: 28px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.03em; color: var(--muted); }
 
 @media (max-width: 900px) {
